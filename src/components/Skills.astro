@@ -1,0 +1,59 @@
+---
+import GitHub from "./icons/GitHub.astro";
+import Laravel from "./icons/Laravel.astro";
+import ReactJs from "./icons/ReactJs.astro";
+import Html from "./icons/Html.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Database from "./icons/Database.astro";
+import Git from "./icons/Git.astro";
+import JavaScript from "./icons/JavaScript.astro";
+
+const SKILLS = [
+    {
+        icon: Laravel,
+        name: "Laravel",
+    },
+    {
+        icon: ReactJs,
+        name: "ReactJs",
+    },
+    {
+        icon: Database,
+        name: "MySQL",
+    },
+    {
+        icon: Git,
+        name: "Git",
+    },
+    {
+        icon: GitHub,
+        name: "GitHub",
+    },
+    {
+        icon: Html,
+        name: "HTML",
+    },
+
+    {
+        icon: JavaScript,
+        name: "JavaScript",
+    },
+    {
+        icon: Tailwind,
+        name: "Tailwind CSS",
+    },
+];
+---
+
+<ul class="flex flex-row mb-2 gap-x-2">
+    {
+        SKILLS.map((skill) => (
+            <li>
+                <span class={`flex items-center gap-x-2 rounded-full bg-white/10 text-white text-sm py-1 px-2.5 `}>
+                    <skill.icon class="size-4 fill-white" />
+                    {skill.name}
+                </span>
+            </li>
+        ))
+    }
+</ul>
